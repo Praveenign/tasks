@@ -30,28 +30,28 @@ int main()
         // this function is created for only unsigned value ,negative value is used for error calculation
 	value=divide(number,divisor);
 	if(value==-1)  // -1 indicates if divisor is zero
-	{
+		{
 		printf("Divisor is zero\n");
-	}
+		}
 	else
-	{
+		{
 		printf("Quotient=%d\n",value);
-	}
+		}
 	printf("Enter the base value ");
 	scanf("%d",&base);
 	printf("Enter the exponential value ");
 	scanf("%d",&exponent);
 	
-		expo=exponential(base,exponent);
+	expo=exponential(base,exponent);
 	if(expo==-1||expo==-2)// -1 indicates that buffer overflow due to exponent is above 16,-2 indicates exponential value is beyond the integer limit 
 
-	{
+		{
 		printf("buffer overflow\n ");
-	}
+		}
 	else
-	{
+		{
 		printf("expo=%d",expo);
-	}
+		}
 
 	//	printf("executed");
 

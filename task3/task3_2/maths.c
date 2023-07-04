@@ -15,6 +15,7 @@
 
 #include<stdio.h>
 #include"maths.h"
+
 /*****************************************************************************************
  *@brief this function takes two integer parameter as argument and perform divide operation and give back the result or feedback as integer
  *@parameter integer
@@ -26,17 +27,17 @@ int divide(int data,int divident)
 {
   if(divident==0)
   {
-	  return -1;
+  return -1;````
   }
   else
   {
-	  return(data/divident);
+  return(data/divident);
   }
 }
 
 void test()
 {
-	printf("\nworked..!!\n");
+   printf("\nworked..!!\n");
 }
 /************************************************************************************************************************************************
  * @brief this function takes first parameter as base and second parameter as power and perform the mathematical operation
@@ -47,27 +48,27 @@ void test()
 *******************************************************************************************************************************/
 int exponential(unsigned int value,unsigned int power)
 {
-	unsigned long expo=1;
+	unsigned long long expo=1;
 	if(value>256||power>16)// for 32 bit processor value >65536 &  power >32  forunsigned integer
-	{
-		return -1;
-	}
+	    {
+	    return -1;
+	    }
 	else
-	{
-		while(power>0)
-		{
-			expo=expo*value;
-			power--;
-		}
+	    {
+	    while(power>0)
+	    	{
+  	    	expo=expo*value;
+	    	power--;
+	    	}	
 
-		if(expo>65556)  //for 32 bit processor value >4294967296 power >32  forunsigned integer
+	    if(expo>65556)  //for 32 bit processor value >4294967296 power >32  forunsigned integer
 		{
-			return -2;
+		return -2;
 		}
-		else
+	    else
 		{
-			return((int) expo);
-		}
-	}
+		return((int) expo);
+		}	
+	    }
 }
 

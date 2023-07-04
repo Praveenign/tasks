@@ -78,13 +78,13 @@ int main(void)
 	signal(SIGSEGV,sig_handler);
 	signal(SIGFPE,sig_handler);
     	if (signal(SIGINT, sig_handler) == SIG_ERR)
-  	printf("\ncan't catch SIGINT\n");
+  		printf("\ncan't catch SIGINT\n");
     	if (signal(SIGUSR1, sig_handler) == SIG_ERR)
-        printf("\ncan't catch SIGUSR1\n");
+        	printf("\ncan't catch SIGUSR1\n");
     	if (signal(SIGKILL, sig_handler) == SIG_ERR)
-        printf("\ncan't catch SIGKILL\n");
+        	printf("\ncan't catch SIGKILL\n");
     	if (signal(SIGSTOP, sig_handler) == SIG_ERR)
-        printf("\ncan't catch SIGSTOP\n");
+        	printf("\ncan't catch SIGSTOP\n");
 
    	divide();
    	pointer();
@@ -95,13 +95,13 @@ int main(void)
 void sig_handler(int signo)
 {
    	if (signo == SIGINT)
-    	printf("received SIGINT\n");
+    		printf("received SIGINT\n");
    	else if (signo == SIGSEGV)
-        printf("received SIGSEGV\n");
+        	printf("received SIGSEGV\n");
     	else if (signo == SIGFPE)
-        printf("received SIGFPE\n");
+        	printf("received SIGFPE\n");
     	else if (signo == SIGTERM)
-        printf("received SIGTERM\n");
+        	printf("received SIGTERM\n");
 }
 
 void divide()
