@@ -5,11 +5,18 @@
  *@return integer
  *@note using external library function so make ensure that library has been attached or not 
  *
+ *Additional information
+ *@ this program is executed with the help of shared library (library linked only during at the run timr)
+ *gcc -c -fPIC -<filename with extension> -o file.o
+ *gcc -shared -o lib<library name with .so> file.o
+ *export LD_LIBRARY_PATH=</exact path where library files located>:=LD_LIBRARY_PATH
+ *gcc -L<library path> -l<library name> -o output
+ *
  *@Author Praveen P
  *@Created date 21/06/23
  *@version 1
  *@bug
- *@last modified data 22/06/23
+ *@last modified data 6/07/23
  ***********************************************************************/
 
 #include<stdio.h>
@@ -30,26 +37,28 @@ int main()
         // this function is created for only unsigned value ,negative value is used for error calculation
 	value=divide(number,divisor);
 	if(value==-1)  // -1 indicates if divisor is zero
-	{
+		{
 		printf("Divisor is zero\n");
-	}
+		}
 	else
-	{
+		{
 		printf("Quotient=%d\n",value);
-	}
+		}
 	printf("Enter the base value ");
 	scanf("%d",&base);
 	printf("Enter the exponential value ");
 	scanf("%d",&exponent);
+	
 	expo=exponential(base,exponent);
 	if(expo==-1||expo==-2)// -1 indicates that buffer overflow due to exponent is above 16,-2 indicates exponential value is beyond the integer limit 
-	{
+
+		{
 		printf("buffer overflow\n ");
-	}
+		}
 	else
-	{
+		{
 		printf("expo=%d",expo);
-	}
+		}
 
 	//	printf("executed");
 

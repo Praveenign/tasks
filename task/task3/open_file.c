@@ -31,26 +31,26 @@ int main()
 	scanf("%s",file_name);
 	data=open_file(file_name);
 	if(data==1)
-		{
+	{
 		printf("file opened successfully");
-		}
+	}
 	else
-		{			
+	{			
 		perror("Error");
-		}
+	}
        return(0);
 }
 int open_file(char*file_name)
 {
 	file=fopen(file_name,"r");
 	if(file!=NULL)
-		{
+	{
 		perror("Error");
 		return(1);
-		}	
+	}	
 	else
-		{
+	{
 		perror("E");
 		return(0);
-		}
+	}
 }

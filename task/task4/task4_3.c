@@ -19,8 +19,8 @@
 ***************************************/
 union punning
 {
-unsigned int data;
-float data1;
+	unsigned int data;
+	float data1;
 };
 float number=0;  // input float variable
 //unsigned int binary[32];   

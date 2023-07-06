@@ -86,9 +86,9 @@ int main(void)
     	if (signal(SIGSTOP, sig_handler) == SIG_ERR)
         	printf("\ncan't catch SIGSTOP\n");
 
-   	divide();
-   	pointer();
-
+   	//divide();
+   	//pointer();
+	loop();
     	//printf("hi");
 	return 0;
 }
@@ -102,6 +102,9 @@ void sig_handler(int signo)
         	printf("received SIGFPE\n");
     	else if (signo == SIGTERM)
         	printf("received SIGTERM\n");
+	else if (signo == SIGSTOP)
+        	printf("received SIGSTOP\n");
+
 }
 
 void divide()
