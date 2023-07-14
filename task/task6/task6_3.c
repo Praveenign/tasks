@@ -1,3 +1,15 @@
+/**********************************************************************
+ *@file task6_3.c
+ *@brief this program executes the tail recursion  
+ *@parameter integer
+ *@return integer
+ *
+ *@Author Praveen P
+ *@Created date 25/06/23
+ *@version 1
+ *@bug
+ *@last modified data 25/06/23
+ ***********************************************************************/
 #include<stdio.h>
 int number;
 long long unsigned int fact(int);

@@ -17,13 +17,13 @@ int number1;
 int number2;
 int main()
 {
-printf("enter the first number");
-scanf("%d",&number1);
-printf("enter the second number");
-scanf("%d",&number2);
-number1=number1^number2;
-number2=number1^number2;
-number1=number1^number2;
-printf("After swap number1=%d\n",number1);
-printf("After swap number2=%d",number2);
+	printf("enter the first number");
+	scanf("%d",&number1);
+	printf("enter the second number");	
+	scanf("%d",&number2);
+	number1=number1^number2;
+	number2=number1^number2;
+	number1=number1^number2;
+	printf("After swap number1=%d\n",number1);
+	printf("After swap number2=%d",number2);
 }
